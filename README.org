@@ -1,0 +1,105 @@
+#+TITLE:     Docker Reference Card
+#+AUTHOR:    Fabrice Niessen
+#+EMAIL:     fniessen@pirilampo.org
+#+DESCRIPTION: A comprehensive reference guide for Docker
+#+KEYWORDS: docker, containerization, reference guide
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:t
+
+#+PROPERTY:  header-args :eval no
+
+#+SETUPFILE: ~/org/theme-readtheorg.setup
+
+#+begin_html
+<a href="http://opensource.org/licenses/GPL-3.0">
+  <img src="http://img.shields.io/:license-gpl-blue.svg" alt=":license-gpl-blue.svg" />
+</a>
+
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=refcard%2dert&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted">
+  <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="btn_donate_LG.gif" />
+</a>
+#+end_html
+
+* Introduction to Docker
+
+Docker is an open-source platform that enables developers to automate the
+deployment and scaling of applications using containerization. It allows for the
+creation and management of lightweight, portable containers that encapsulate an
+application and its dependencies. This reference card provides a quick overview
+of Docker's key features and commonly used commands.
+
+* Example invocation
+
+Here is an example of how to use Docker to run a container:
+
+: docker run -it --rm -v "$(pwd)":/usr/local/src/your-app ferrarimarco/github-changelog-generator
+
+This command executes the "github-changelog-generator" image inside a Docker
+container. Let's break down the components of the command:
+
+- ~docker run~: This instructs Docker to run a container.
+
+- ~-it~: This option enables an interactive session with the container, allowing
+  you to interact with its shell.
+
+- ~--rm~: This flag automatically removes the container once it finishes running.
+
+- ~-v "$(pwd)":/usr/local/src/your-app~: This option mounts the current working
+  directory (~$(pwd)~) to the =/usr/local/src/your-app= directory inside the
+  container. This allows the container to access and modify files in the current
+  directory.
+
+- ~ferrarimarco/github-changelog-generator~: This specifies the image to be used
+  for the container. In this case, it uses the "github-changelog-generator"
+  image from the Docker Hub repository maintained by the user "ferrarimarco."
+
+Feel free to explore Docker's extensive documentation and experiment with
+different commands and options to unleash the full potential of containerization
+for your development workflows.
+
+* Contributing
+
+** Issues
+
+Report issues and suggest features and improvements on the [[https://github.com/fniessen/refcard-ERT/issues/new][GitHub issue tracker]].
+
+** Patches
+
+I love contributions!  Patches under any form are always welcome!
+
+** Donations
+
+If you like the refcard-ERT project, you can show your appreciation and support
+future development by making a [[https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=refcard%2dERT&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted][donation]] through PayPal.
+
+Regardless of the donations, refcard-ERT will always be free both as in beer and
+as in speech.
+
+* License
+
+Copyright (C) 2019-2021 Fabrice Niessen.
+
+Author: Fabrice Niessen \\
+Keywords: docker
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program. If not, see http://www.gnu.org/licenses/.
+
+#+begin_html
+<a href="http://opensource.org/licenses/GPL-3.0">
+  <img src="http://img.shields.io/:license-gpl-blue.svg" alt=":license-gpl-blue.svg" />
+</a>
+
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=refcard%2dert&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted">
+  <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="btn_donate_LG.gif" />
+</a>
+#+end_html
